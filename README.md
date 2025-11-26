@@ -1,3 +1,42 @@
-# Blog-Interface-Web-
-Trabalho desenvolvido ao longo do semestre para a disciplina de desenvolvimento de interfaces web
-durante o semestre foi realizado de maneira incremental o desenvolvimento de uma pagina web de qualquer tematica escolhida, eu decidi por fazer um blog que serve para documentar sobre criptomoedas , ele tem sistema de login e cadastro e usa um sistema de jsonserver para administrar todos os dados que carregam na pagina alem de usar da biblioteca graph js e boostrap para gerar um grafico de pizza e a responsividade respectivamente.
+# 📘 Blog Interface Web
+
+Projeto desenvolvido ao longo do semestre para a disciplina **Desenvolvimento de Interfaces Web (DIW)**.  
+O objetivo foi criar uma aplicação moderna, responsiva e funcional simulando um **blog com sistema de posts**, integração com API fake (**JSON Server**) e boas práticas de front-end.
+
+---
+
+##  Tecnologias Utilizadas
+
+- **HTML5**
+- **CSS3** 
+- **JavaScript**
+- **JSON Server**
+- **Chart.js**
+- **Fetch API**
+- **SessionStorage / LocalStorage**
+- **Bostrap**
+
+---
+
+## Funcionalidades
+
+### 👤 Autenticação
+- Tela de **login** e **cadastro**
+- Armazenamento de sessão com `sessionStorage`
+- Proteção de páginas internas
+- Validação de credenciais e mensagens de erro
+
+### 📝 Sistema de Posts
+- Listagem dinâmica de posts vindos da API
+- Página de **detalhes** de cada postagem
+- Sistema de **favoritos** por usuário
+- Busca e filtros (dependendo da versão do trabalho)
+
+### 📊 Dashboard
+- Gráfico de pizza gerado com **Chart.js**
+- Dados extraídos do JSON Server
+
+### 📱 Design Responsivo
+- Interface adaptativa (desktop, tablet, mobile)
+- Menus colapsáveis
+- Layout fluido e moderno
