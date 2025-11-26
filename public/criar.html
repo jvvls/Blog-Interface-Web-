@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
-  <!-- header (igual ao index) -->
   <header class="text-white py-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
     <a href="index.html" class="d-flex align-items-center mb-2 mb-md-0">
       <img src="assets/img/btc-main.png" alt="Logo" class="img-fluid" style="max-height:80px;">
@@ -41,7 +40,6 @@
 
   <script src="assets/scripts/app.js"></script>
   <script>
-    // usa a função novaPostagem já definida em app.js
     document.getElementById('form-nova-criar').addEventListener('submit', async (e) => {
       e.preventDefault();
       const nome = document.getElementById('nome').value.trim();
@@ -52,7 +50,6 @@
       const market_cap = Number(document.getElementById('mktc').value) || 0;
 
       await novaPostagem({ nome, descricao, criador, ano_criacao: ano, conteudo: descricao, imagem_principal, market_cap, destaque: false });
-      // volta para home
       window.location.href = 'index.html';
     });
   </script>
