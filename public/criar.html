@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Criar Criptomoeda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <!-- header (igual ao index) -->
+  <header class="text-white py-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <a href="index.html" class="d-flex align-items-center mb-2 mb-md-0">
+      <img src="assets/img/btc-main.png" alt="Logo" class="img-fluid" style="max-height:80px;">
+    </a>
+    <div class="titulo text-center flex-grow-1"><h1 class="m-0 fs-2">Portal Cripto</h1></div>
+    <nav class="d-flex gap-2 align-items-center">
+      <a href="criar.html" class="btn btn-outline-light btn-sm">Cadastro</a>
+      <a href="favoritos.html" class="btn btn-outline-light btn-sm">Favoritos</a>
+      <button id="btn-logout" class="btn btn-warning btn-sm">Logout</button>
+    </nav>
+  </header>
+
+  <main class="flex-grow-1 container py-5">
+    <div class="bloco p-4 mx-auto" style="max-width:700px;">
+      <h3>Criar nova criptomoeda</h3>
+
+      <form id="form-nova-criar" class="mt-3">
+        <input id="nome" class="form-control mb-2" placeholder="Nome" required>
+        <input id="descricao" class="form-control mb-2" placeholder="Descrição" required>
+        <input id="criador" class="form-control mb-2" placeholder="Criador">
+        <input id="ano" type="number" class="form-control mb-2" placeholder="Ano de criação">
+        <input id="imagem_principal" class="form-control mb-2" placeholder="URL da imagem">
+        <input id="mktc" type="number" class="form-control mb-2" placeholder="Market cap">
+        <button class="btn w-100 custom-btn">Criar</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="py-2 text-center text-white mt-auto">© 2025 Portal Bitcoin</footer>
+
+  <script src="assets/scripts/app.js"></script>
+  <script>
+    // usa a função novaPostagem já definida em app.js
+    document.getElementById('form-nova-criar').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const descricao = document.getElementById('descricao').value.trim();
+      const criador = document.getElementById('criador').value.trim();
+      const ano = parseInt(document.getElementById('ano').value) || null;
+      const imagem_principal = document.getElementById('imagem_principal').value.trim() || '';
+      const market_cap = Number(document.getElementById('mktc').value) || 0;
+
+      await novaPostagem({ nome, descricao, criador, ano_criacao: ano, conteudo: descricao, imagem_principal, market_cap, destaque: false });
+      // volta para home
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

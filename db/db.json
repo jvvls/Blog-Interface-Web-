@@ -1,0 +1,227 @@
+{
+  "usuarios": [
+    {
+      "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "login": "admin",
+      "senha": "123",
+      "nome": "Administrador do Sistema",
+      "email": "admin@abc.com",
+      "favoritos" : []
+    },
+    {
+      "id": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e",
+      "login": "user",
+      "senha": "123",
+      "nome": "Usuario Comum",
+      "email": "user@abc.com",
+      "favoritos" : []
+    },
+    {
+      "id": "d055",
+      "nome": "joao",
+      "email": "teste@mail.com",
+      "senha": "123",
+      "favoritos" : []
+    }
+  ],
+  "criptomoedas": [
+    {
+      "id": 1,
+      "nome": "Bitcoin",
+      "descricao": "A primeira e mais famosa criptomoeda do mundo, criada em 2009, símbolo da descentralização e da liberdade financeira.",
+      "conteudo": "O Bitcoin foi o ponto de partida para toda a revolução das criptomoedas. Criado por Satoshi Nakamoto em 2009, ele apresentou ao mundo a ideia de um dinheiro digital descentralizado, livre do controle de governos e instituições financeiras. Sua base tecnológica, o blockchain, funciona como um grande livro-razão público, no qual todas as transações são registradas de forma transparente, permanente e inviolável. Com oferta limitada a 21 milhões de unidades, o Bitcoin introduziu um novo paradigma econômico baseado na escassez digital, sendo frequentemente considerado o equivalente moderno do ouro — um ativo de reserva de valor para a era digital. Além de sua função monetária, o Bitcoin tornou-se um movimento cultural e político em defesa da soberania financeira individual.",
+      "ano_criacao": 2009,
+      "criador": "Satoshi Nakamoto",
+      "destaque": true,
+      "data": "2025-03-30",
+      "imagem_principal": "assets/img/btc1.png",
+      "preco": 35000,
+      "market_cap": 680000000000,
+      "subtopicos": [
+        {
+          "id": 1,
+          "titulo": "Como funciona",
+          "descricao": "O Bitcoin opera em uma rede descentralizada composta por milhares de computadores (nós) que validam e registram transações em um blockchain público. Mineradores competem para resolver problemas criptográficos complexos e, ao fazê-lo, confirmam blocos de transações, garantindo a segurança e a imutabilidade da rede.",
+          "imagem": "assets/img/btc2.png"
+        },
+        {
+          "id": 2,
+          "titulo": "Como comprar",
+          "descricao": "Bitcoin pode ser adquirido em corretoras (exchanges), por meio de carteiras P2P (peer-to-peer) ou caixas eletrônicos de cripto. Após a compra, é altamente recomendável transferir os fundos para uma carteira pessoal, garantindo a custódia direta e a segurança das chaves privadas.",
+          "imagem": "assets/img/btc3.png"
+        },
+        {
+          "id": 3,
+          "titulo": "Mineração e Halving",
+          "descricao": "A mineração é o processo que valida transações e introduz novos bitcoins no sistema. A cada quatro anos ocorre o 'halving', evento que reduz pela metade a recompensa dos mineradores, diminuindo a emissão de novas moedas e aumentando a escassez — um dos fatores que impulsionam a valorização do ativo ao longo do tempo.",
+          "imagem": "assets/img/btc4.png"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Ethereum",
+      "descricao": "A segunda maior criptomoeda do mundo, reconhecida por introduzir contratos inteligentes e inaugurar a era dos aplicativos descentralizados (dApps).",
+      "conteudo": "Lançada em 2015 por Vitalik Buterin, a Ethereum revolucionou o conceito de blockchain ao transformá-lo em uma plataforma programável. Diferente do Bitcoin, que serve principalmente como meio de troca e reserva de valor, a Ethereum permite que desenvolvedores criem contratos inteligentes — programas autônomos que executam regras e acordos sem intermediários. Essa inovação deu origem a um vasto ecossistema de finanças descentralizadas (DeFi), tokens não fungíveis (NFTs), jogos blockchain e DAOs (organizações autônomas descentralizadas). A rede continua evoluindo com atualizações como o Ethereum 2.0, que introduziu o Proof of Stake, reduzindo drasticamente o consumo energético e ampliando a escalabilidade da plataforma.",
+      "ano_criacao": 2015,
+      "criador": "Vitalik Buterin",
+      "destaque": true,
+      "data": "2025-03-30",
+      "imagem_principal": "assets/img/eth.png",
+      "preco": 2100,
+      "market_cap": 250000000000,
+      "subtopicos": [
+        {
+          "id": 1,
+          "titulo": "Contratos Inteligentes",
+          "descricao": "Os contratos inteligentes são códigos autoexecutáveis armazenados no blockchain da Ethereum. Eles permitem a criação de aplicações seguras e autônomas que não dependem de intermediários, tornando possível desde plataformas financeiras complexas até jogos e marketplaces descentralizados.",
+          "imagem": "assets/img/eth1.png"
+        },
+        {
+          "id": 2,
+          "titulo": "Ethereum 2.0",
+          "descricao": "Com a transição do mecanismo de consenso Proof of Work para Proof of Stake, a Ethereum reduziu seu consumo energético em mais de 99%. Essa atualização também abriu caminho para futuras melhorias de desempenho e escalabilidade, como o sharding e a integração com camadas secundárias (Layer 2).",
+          "imagem": "assets/img/eth2.png"
+        },
+        {
+          "id": 3,
+          "titulo": "Aplicações DeFi e NFTs",
+          "descricao": "A Ethereum é o berço da economia digital moderna. Protocolos de finanças descentralizadas (DeFi) permitem empréstimos, trocas e rendimentos sem bancos, enquanto os NFTs revolucionaram o conceito de propriedade digital, abrindo novas fronteiras para arte, jogos e identidade virtual.",
+          "imagem": "assets/img/eth3.png"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Solana",
+      "descricao": "Blockchain de alta velocidade, escalável e de baixo custo, projetada para impulsionar aplicativos e jogos descentralizados em larga escala.",
+      "conteudo": "Solana é uma das blockchains mais rápidas e eficientes da atualidade, combinando dois mecanismos de consenso inovadores: Proof of History (PoH) e Proof of Stake (PoS). Essa arquitetura permite que a rede processe milhares de transações por segundo com taxas extremamente baixas, tornando-a ideal para aplicações que exigem alta performance, como jogos, NFTs e plataformas DeFi. Seu token nativo, SOL, é usado para taxas de rede, staking e governança. Apesar do sucesso, a Solana também enfrenta críticas relacionadas à sua centralização e a interrupções ocasionais, reflexo do desafio de equilibrar velocidade e descentralização.",
+      "ano_criacao": 2020,
+      "criador": "Anatoly Yakovenko",
+      "destaque": false,
+      "data": "2025-03-30",
+      "imagem_principal": "assets/img/sol.png",
+      "preco": 95,
+      "market_cap": 40000000000,
+      "subtopicos": [
+        {
+          "id": 1,
+          "titulo": "Proof of History",
+          "descricao": "O Proof of History introduz um relógio criptográfico que registra a ordem exata das transações antes mesmo de serem validadas, otimizando a eficiência da rede e reduzindo o tempo de confirmação.",
+          "imagem": "assets/img/sol1.png"
+        },
+        {
+          "id": 2,
+          "titulo": "Vantagens",
+          "descricao": "A Solana oferece transações em frações de segundo, taxas insignificantes e suporte a aplicações de alto desempenho. Sua estrutura favorece desenvolvedores e usuários que buscam uma experiência fluida e econômica.",
+          "imagem": "assets/img/sol2.png"
+        },
+        {
+          "id": 3,
+          "titulo": "Desafios e Críticas",
+          "descricao": "Embora tecnicamente avançada, a rede Solana enfrenta críticas pela concentração de validadores e por interrupções temporárias. Mesmo assim, continua atraindo desenvolvedores e projetos inovadores por seu desempenho incomparável.",
+          "imagem": "assets/img/sol3.png"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "Monero",
+      "descricao": "Criptomoeda focada em privacidade e anonimato total, símbolo da luta pela liberdade financeira individual.",
+      "conteudo": "Criada em 2014 a partir do protocolo CryptoNote, Monero é uma criptomoeda que coloca a privacidade como prioridade máxima. Diferente do Bitcoin, onde todas as transações são públicas, o Monero utiliza técnicas criptográficas avançadas — como assinaturas em anel, endereços ocultos e transações confidenciais — para garantir que remetentes, destinatários e valores permaneçam completamente anônimos. Essa ênfase em sigilo financeiro atrai tanto usuários legítimos preocupados com segurança de dados quanto atenção de reguladores preocupados com uso ilícito. Apesar das controvérsias, Monero se consolidou como o padrão ouro em privacidade digital.",
+      "ano_criacao": 2014,
+      "criador": "Desenvolvedores anônimos (baseada no projeto CryptoNote)",
+      "destaque": false,
+      "data": "2025-03-30",
+      "imagem_principal": "assets/img/xmr.png",
+      "preco": 175,
+      "market_cap": 3200000000,
+      "subtopicos": [
+        {
+          "id": 1,
+          "titulo": "Anonimato total",
+          "descricao": "O Monero utiliza assinaturas em anel para misturar as transações de vários usuários, endereços furtivos para ocultar o destinatário e transações confidenciais para esconder os valores transferidos, garantindo privacidade completa.",
+          "imagem": "assets/img/xmr1.png"
+        },
+        {
+          "id": 2,
+          "titulo": "Privacidade versus Regulamentação",
+          "descricao": "Embora essencial para proteger a liberdade financeira, o anonimato do Monero gera atrito com órgãos reguladores e corretoras, que frequentemente restringem sua negociação por dificultar o rastreamento de atividades ilegais.",
+          "imagem": "assets/img/xmr2.png"
+        },
+        {
+          "id": 3,
+          "titulo": "Importância",
+          "descricao": "O Monero representa um pilar ideológico do movimento cripto, defendendo o direito à privacidade como elemento fundamental da autonomia e segurança individual em um mundo cada vez mais vigiado.",
+          "imagem": "assets/img/xmr3.png"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nome": "Polkadot",
+      "descricao": "Blockchain de nova geração criada para conectar múltiplas redes e promover interoperabilidade entre diferentes ecossistemas blockchain.",
+      "conteudo": "Idealizada por Gavin Wood, cofundador da Ethereum, Polkadot foi projetada para resolver um dos maiores desafios do setor: a falta de comunicação entre blockchains. Seu protocolo permite que diferentes redes troquem informações e ativos de forma segura, criando um verdadeiro ecossistema interconectado. A arquitetura da Polkadot é baseada em uma cadeia principal (Relay Chain) que coordena as parachains — blockchains independentes e customizáveis que herdam a segurança da rede principal. Essa estrutura garante escalabilidade, flexibilidade e governança participativa, tornando a Polkadot uma das plataformas mais promissoras para o futuro da Web3.",
+      "ano_criacao": 2020,
+      "criador": "Gavin Wood",
+      "destaque": false,
+      "data": "2025-03-30",
+      "imagem_principal": "assets/img/dot.png",
+      "preco": 7.5,
+      "market_cap": 9000000000,
+      "subtopicos": [
+        {
+          "id": 1,
+          "titulo": "Interoperabilidade",
+          "descricao": "A principal inovação da Polkadot é sua capacidade de conectar diferentes blockchains, permitindo a troca segura de dados e ativos entre redes públicas, privadas e consórcios empresariais.",
+          "imagem": "assets/img/dot1.png"
+        },
+        {
+          "id": 2,
+          "titulo": "Parachains",
+          "descricao": "As parachains são blockchains independentes que se conectam à rede principal da Polkadot. Elas podem ser personalizadas para casos de uso específicos, aproveitando a segurança e a comunicação nativa da Relay Chain.",
+          "imagem": "assets/img/dot2.png"
+        },
+        {
+          "id": 3,
+          "titulo": "Governança On-chain",
+          "descricao": "O sistema de governança descentralizada da Polkadot permite que os detentores de DOT participem ativamente do futuro da rede, propondo e votando em atualizações, melhorias e decisões de protocolo.",
+          "imagem": "assets/img/dot3.png"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nome": "Ripple (XRP)",
+      "descricao": "Criptomoeda voltada para o setor financeiro, criada para facilitar pagamentos internacionais rápidos, baratos e seguros entre bancos e instituições.",
+      "conteudo": "A Ripple é um protocolo de pagamento digital lançado em 2012 pela empresa Ripple Labs, com o objetivo de modernizar o sistema financeiro global. Diferente da maioria das criptomoedas, o foco da Ripple não é substituir os bancos, mas integrá-los a uma rede blockchain mais eficiente. Seu token nativo, o XRP, funciona como uma ponte de liquidez entre diferentes moedas, permitindo transferências internacionais quase instantâneas com taxas mínimas. O sistema utiliza um mecanismo de consenso proprietário, o Ripple Protocol Consensus Algorithm (RPCA), que não depende de mineração, tornando-o extremamente rápido e sustentável. Embora tenha enfrentado disputas regulatórias com a SEC nos EUA, a Ripple permanece uma das tecnologias mais adotadas por bancos e instituições financeiras que buscam inovação em pagamentos transfronteiriços.",
+      "ano_criacao": 2012,
+      "criador": "Ripple Labs (fundada por Chris Larsen e Jed McCaleb)",
+      "destaque": false,
+      "data": "2025-03-30",
+      "imagem_principal": "assets/img/xrp.png",
+      "preco": 0.55,
+      "market_cap": 26000000000,
+      "subtopicos": [
+        {
+          "id": 1,
+          "titulo": "Como funciona o RippleNet",
+          "descricao": "A RippleNet é a rede global que conecta bancos e provedores de pagamento, permitindo transferências internacionais em segundos, com custos muito menores do que os sistemas tradicionais como SWIFT.",
+          "imagem": "assets/img/xrp1.png"
+        },
+        {
+          "id": 2,
+          "titulo": "Token XRP",
+          "descricao": "O XRP atua como ativo intermediário entre diferentes moedas, fornecendo liquidez instantânea e eliminando a necessidade de contas pré-financiadas entre instituições financeiras.",
+          "imagem": "assets/img/xrp2.png"
+        },
+        {
+          "id": 3,
+          "titulo": "Controvérsias e Regulação",
+          "descricao": "A Ripple enfrentou processos da SEC sob a alegação de que o XRP seria um valor mobiliário não registrado. Apesar da disputa, decisões judiciais recentes têm fortalecido a legitimidade do ativo e reavivado o interesse institucional.",
+          "imagem": "assets/img/xrp3.png"
+        }
+      ]
+    }
+  ]
+}
