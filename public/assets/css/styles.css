@@ -91,7 +91,7 @@ h3, h4 {
 
 /* BOTÕES DO EDITOR */
 #form-nova button {
-  background-color: #f1941a; /* laranja do site */
+  background-color: #f1941a; 
   color: white;
   border: none;
   border-radius: 12px;
@@ -102,7 +102,7 @@ h3, h4 {
 }
 
 #form-nova button:hover {
-  background-color: #d37e14; /* laranja mais escuro ao passar o mouse */
+  background-color: #d37e14; 
   transform: scale(1.05);
 }
 
@@ -126,18 +126,20 @@ h3, h4 {
 }
 
 .chart-container {
-  width: 320px;   /* ajuste como quiser */
-  height: 320px;
-
+  position: relative;
+  width: 100%;
+  max-width: 500px;  
+  height: 500px;     
+  margin: 0 auto;
+  padding-bottom: 50px; /
 }
 
-/* Override do Bootstrap */
 .chart-container canvas {
   width: 100% !important;
   height: 100% !important;
-  max-width: none !important;
+  display: block;
 }
-/* Inputs visualmente iguais ao padrão do site */
+
 .custom-input {
   border-radius: 12px;
   border: 2px solid #f1941a;
@@ -163,3 +165,63 @@ body {
   background-color: #121212;
 }
 
+/* Container da busca */
+#busca-container {
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+}
+
+/* Input da busca segue o estilo do site */
+#busca {
+  border-radius: 12px !important;
+  border: 2px solid #f1941a;
+  padding: 10px 14px;
+  background-color: #1b1b1b;
+  color: white;
+  transition: 0.3s;
+}
+
+#busca::placeholder {
+  color: #cccccc;
+}
+
+/* Efeito ao focar */
+#busca:focus {
+  outline: none;
+  border-color: #d37e14;
+  background-color: #2b2b2b;
+}
+
+/* Botão da busca igual ao padrão laranja */
+#btn-buscar {
+  background-color: #f1941a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 12px;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+#btn-buscar:hover {
+  background-color: #d37e14;
+  transform: scale(1.05);
+}
+
+/* Ajuste mobile */
+@media (max-width: 480px) {
+  #busca-container {
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+  }
+  
+  #btn-buscar {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+#busca-container {
+  margin-top: 40px !important;
+}

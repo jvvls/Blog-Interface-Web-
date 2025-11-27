@@ -83,9 +83,21 @@ async function montarGrafico() {
         datasets: [{
           data: data.map(c => Number(c.market_cap) || 0)
         }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,  
+        plugins: {
+          legend: {
+            position: 'bottom',  
+            labels: {
+              color: '#000',
+              font: { size: 12 }
+            }
+          }
+        }
       }
     });
-
   } catch (err) {
     console.error("Erro ao montar gráfico:", err);
   }
@@ -126,14 +138,14 @@ async function apagarPostagem(id) {
 
 
 // ======================================
-// CRUD DO cadastro.html (automático)
+// CRUD DO cadastro.html
 // ======================================
 function ativarCrudCadastro() {
   const form = document.getElementById("crud-form");
   const select = document.getElementById("crud-operacao");
   const msg = document.getElementById("msg");
 
-  if (!form) return; // não está na página de CRUD
+  if (!form) return;
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -153,7 +165,6 @@ function ativarCrudCadastro() {
 
     try {
       let res;
-
       if (op === "POST") res = await novaPostagem(dados);
       if (op === "PUT") res = await editarPostagem(id, dados);
       if (op === "DELETE") res = await apagarPostagem(id);
@@ -170,16 +181,30 @@ function ativarCrudCadastro() {
 }
 
 
+// ======================================
+// BUSCA POR NOME
+// ======================================
+async function buscarCriptosPorNome(nome) {
+  const todas = await carregarCriptos();
+  if (!nome.trim()) return todas;
+
+  return todas.filter(c =>
+    c.nome.toLowerCase().includes(nome.toLowerCase())
+  );
+}
+
+
 
 // ======================================
 // HOME
+// (agora aceita listaFiltrada para busca)
 // ======================================
-async function montarHome() {
+async function montarHome(listaFiltrada = null) {
   const cards = document.getElementById("cards-container");
   const carousel = document.getElementById("carousel-container");
   if (!cards) return;
 
-  const criptos = await carregarCriptos();
+  const criptos = listaFiltrada || await carregarCriptos();
   const favoritos = getFavoritos();
 
   // carrossel
@@ -221,7 +246,6 @@ async function montarHome() {
   }).join("");
 }
 
-
 // ======================================
 // DETALHES
 // ======================================
@@ -241,7 +265,6 @@ async function montarDetalhes() {
     <p>${item.conteudo}</p>
   ` : "<p>Item não encontrado.</p>";
 }
-
 
 // ======================================
 // FAVORITOS
@@ -270,7 +293,6 @@ async function montarFavoritos() {
   `).join("");
 }
 
-
 // ======================================
 // INICIALIZAÇÃO GLOBAL
 // ======================================
@@ -285,6 +307,26 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const btnLogout = document.getElementById("btn-logout");
   if (btnLogout) btnLogout.addEventListener("click", logout);
+
+  // BUSCA POR NOME
+  const inputBusca = document.getElementById("busca");
+  const btnBuscar = document.getElementById("btn-buscar");
+
+  if (btnBuscar && inputBusca) {
+    btnBuscar.addEventListener("click", async () => {
+      const termo = inputBusca.value;
+      const filtradas = await buscarCriptosPorNome(termo);
+      montarHome(filtradas);
+    });
+
+    inputBusca.addEventListener("keypress", async (e) => {
+      if (e.key === "Enter") {
+        const termo = inputBusca.value;
+        const filtradas = await buscarCriptosPorNome(termo);
+        montarHome(filtradas);
+      }
+    });
+  }
 
   // deixar disponível no escopo global
   window.toggleFavorito = toggleFavorito;
