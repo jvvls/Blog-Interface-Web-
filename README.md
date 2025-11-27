@@ -20,7 +20,7 @@ O objetivo foi criar uma aplicação moderna, responsiva e funcional simulando u
 
 ## Wireframe
 
-![wirefram](public/assets/img/wireframe.png)
+![wireframe](public/assets/img/wireframeFinal.png)
 
 ## Timeline do projeto
 
