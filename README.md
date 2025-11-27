@@ -18,6 +18,15 @@ O objetivo foi criar uma aplicação moderna, responsiva e funcional simulando u
 
 ---
 
+## Wireframe
+
+![wirefram](public/assets/img/wireframe.png)
+
+## Timeline do projeto
+
+![timeline](public/assets/img/timeline.png)
+
+
 ## Funcionalidades
 
 ###  Autenticação
@@ -40,3 +49,4 @@ O objetivo foi criar uma aplicação moderna, responsiva e funcional simulando u
 - Interface adaptativa (desktop, tablet, mobile)
 - Menus colapsáveis
 - Layout fluido e moderno
+
